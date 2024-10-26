@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+}
+.menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+}
+.logo h1 {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  transition: all 0.3s ease-in-out;
+  animation: colorChange 5s infinite;
+
+}
+h1:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+a{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 22px;
+    font-style: normal;
+}
+@keyframes colorChange {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: rgb(83, 0, 128);
+  }
+ 
+  100% {
+    color: blue;
+  }
+}

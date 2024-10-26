@@ -1,0 +1,10 @@
+<mat-card appearance="outlined">
+  <mat-card-header style="display: flex; justify-content: center">
+    <img [src]="user.avatar" alt="" />
+  </mat-card-header>
+  <mat-card-content style="text-align: center">
+    {{ user.first_name }} {{ user.last_name }}
+    <br />
+    {{ user.email }}
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-grid-list cols="3" gutterSize="10px">
+    @for(user of users;track user){
+    <mat-grid-tile (click)="details(user)">
+      <app-item-card [user]="user"></app-item-card>
+    </mat-grid-tile>
+
+    }
+  </mat-grid-list>
+  <div class="btn-bar">
+    <div
+      class="button"
+      [ngClass]="{ 'end-pagination': currentPage == 1 ? true : false }"
+      (click)="beforePage()"
+    >
+      < Back
+    </div>
+    <div class="pagination">Page {{ currentPage }} of {{ maxPage }}</div>
+    <div
+      [ngClass]="{ 'end-pagination': currentPage == maxPage ? true : false }"
+      class="button"
+      (click)="nextPage()"
+    >
+      Next >
+    </div>
+  </div>
+</div>

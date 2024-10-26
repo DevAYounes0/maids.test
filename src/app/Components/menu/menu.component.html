@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="logo">
+    <h1 routerLink="/home">Maids.cc</h1>
+  </div>
+  <div class="menu">
+    <div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Search</mat-label>
+          <input
+            type="text"
+            placeholder="Pick one user"
+            aria-label="First name"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete
+            (optionSelected)="onOptionSelected($event.option.value)"
+            #auto="matAutocomplete"
+          >
+            @for (option of filteredOptions | async; track option) {
+            <mat-option [value]="option">{{ option }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      <!-- <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li> -->
+    </div>
+  </div>
+</div>

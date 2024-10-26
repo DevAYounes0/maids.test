@@ -1,0 +1,6 @@
+mat-card{
+  width: 250px;
+  height: 250px;
+}
+mat-card-content{margin-top: 10px;}
+img{height: 150px;}

@@ -1,0 +1,26 @@
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  "
+>
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="block-card" appearance="outlined">
+    <mat-card-header>
+      <img [src]="user.avatar" mat-card-avatar />
+      <mat-card-title>{{ user.first_name }}</mat-card-title>
+      <mat-card-subtitle>{{ user.last_name }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="user.avatar" alt="Photo of a Shiba Inu" />
+    <mat-card-content>
+      <p style="margin-top: 10px">
+        details of contact information<br />
+        Email: {{ user.email }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
